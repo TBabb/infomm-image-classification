@@ -8,7 +8,7 @@ To use it, download both the .m and .mat files and run them in Matlab.
 
 --------------------------
 
-## Choosing the training set
+## Choosing the Training Set
 
 There are 2414 photos, say images, of 38 people in the Yale database. The user chooses which people are in the test set in one of two ways:
 
@@ -17,18 +17,19 @@ There are 2414 photos, say images, of 38 people in the Yale database. The user c
 
 In either case, the function selects 10 random images of each person. All the other images are put in the training set.
 
-## Implementing the PCA algorithm
+## Implementing the PCA Algorithm
 
 PCA is a standard technique used to approximate the original data with lower dimensional feature vectors. We extract a new orthogonal basis, called the feature space, from the training samples and project both the test and the training images into this space. We then remove the dimensions that contain the lowest amount of information.
 
 Additionally, to improve this algorithm we calculate the "mean face" [average of all images in training set] and it from every image, in both the training and test sets. We then do PCA as described above, and finally, we weight every basis vector in the feature space by relative importance.
 
-## Implementing the LDA algorithm
+## Implementing the LDA Algorithm
 
-% Compute the within-class and between-class scatter matrices
+We know in advance the people that each image in the training space corresponds to. The images in the training set that are of the same person make up a "class". LDA aims to increase the separability of the classes in feature space. LDA searches for a projection which makes each class have the smallest within-class scatter (all the images in a given class are "close together") and the largest between-class scatter (each class is "far away" from every other class).
 
-% Find the projection that maximises between-class spacing and
-% minimises within-class spacing
+We compute the within-class and between-class scatter matrices. We build a projection into the LDA subspace based on these, and map each image into it.
 
-% For each member of the test set, find the nearest members of the training
-% set to determine the person represented
+## Implementing the K-Nearest Neighbours algorithm
+in the LDA subspace, for each image in the test set, we find the nearest images in the training set to determine the person represented.
+
+Finally, we estabilish the percentage success rate of the overall algorithm.
