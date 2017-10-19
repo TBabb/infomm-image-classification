@@ -12,7 +12,7 @@ Download the both the .m and .mat files and run them in Matlab.
 
 EXPLANATION:
 
-# Choosing the training set
+## Choosing the training set
 
 There are 2414 photos of 38 people in the Yale database. The user chooses which people are in the test set in one of two ways:
 
@@ -21,7 +21,7 @@ There are 2414 photos of 38 people in the Yale database. The user chooses which 
 
 In either case, the function selects 10 random images of each person. All the other images are in the training set.
 
-# Implementing the PCA algorithm.
+## Implementing the PCA algorithm.
 
 % Find the "mean face" [average of all images in training set] and
 % subtract it from all images in both the training and the test sets.
