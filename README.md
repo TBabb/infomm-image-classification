@@ -30,6 +30,6 @@ We know in advance the people that each image in the training space corresponds 
 We compute the within-class and between-class scatter matrices. We build a projection into the LDA subspace based on these, and map each image into it.
 
 ## Implementing the K-Nearest Neighbours algorithm
-in the LDA subspace, for each image in the test set, we find the nearest images in the training set to determine the person represented.
+In the LDA subspace, for each image in the test set, we find the nearest images in the training set to determine the person represented.
 
 Finally, we estabilish the percentage success rate of the overall algorithm.
