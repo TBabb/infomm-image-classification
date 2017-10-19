@@ -2,15 +2,11 @@
 
 This repository is part of a project by Giancarlo Antonucci and Thomas Babb, submitted as part of the CDT in Industrially Focused Mathematical Modelling at The University of Oxford.
 
---------------------------
-
 This code uses the Yale face database (YaleB_32x32.mat) to test the effectiveness of a hybrid facial recognition algorithm. The function imag_class.m takes inputs from the user and outputs the percentage success rate of the algorithm for those inputs.
 
-INSTALLATION:
+To use it, download both the .m and .mat files and run them in Matlab.
 
-Download the both the .m and .mat files and run them in Matlab.
-
-EXPLANATION:
+--------------------------
 
 ## Choosing the training set
 
